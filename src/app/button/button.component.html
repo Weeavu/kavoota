@@ -1,20 +1,12 @@
 <div class="center">
   <div class="btn-group-vertical">
     <div class="btn-group">
-      <button class="btn btn-primary" (click)="service.movementEvent()">
-        Up
-      </button>
+      <button class="btn btn-primary" (click)="move('Up')">Up</button>
     </div>
     <div class="btn-group">
-      <button class="btn btn-primary" (click)="service.movementEvent()">
-        Left
-      </button>
-      <button class="btn btn-primary" (click)="service.movementEvent()">
-        Down
-      </button>
-      <button class="btn btn-primary" (click)="service.movementEvent()">
-        Right
-      </button>
+      <button class="btn btn-primary" (click)="move('Left')">Left</button>
+      <button class="btn btn-primary" (click)="move('Down')">Down</button>
+      <button class="btn btn-primary" (click)="move('Right')">Right</button>
     </div>
   </div>
 </div>
@@ -24,37 +16,67 @@
 
 <div class="center">
   <div class="btn-group">
-    <button class="btn btn-success" (click)="onChange(100, -4, -6, -8, -4)">
+    <button class="btn btn-success" (click)="onChange(100, 0, 0, 0, 0, 'Gas')">
       ⛽
     </button>
-    <button class="btn btn-success" (click)="onChange(0, -4, -6, 100, -4)">
+    <button
+      class="btn btn-success"
+      (click)="onChange(0, 0, 0, 100, 0, 'Flower Shop')"
+    >
       🌼
     </button>
-    <button class="btn btn-success" (click)="onChange(0, -15, -10, 100, -4)">
+    <button
+      class="btn btn-success"
+      (click)="onChange(0, 0, 0, 100, 0, 'Ballroom')"
+    >
       💃
     </button>
-    <button class="btn btn-success" (click)="onChange(0, -4, 60, -8, -4)">
+    <button
+      class="btn btn-success"
+      (click)="onChange(0, 0, 60, 0, 0, 'Coffeehouse')"
+    >
       ☕
     </button>
-    <button class="btn btn-success" (click)="onChange(0, -4, 60, -8, -4)">
+    <button
+      class="btn btn-success"
+      (click)="onChange(0, 0, 60, 0, 0, 'Juice Bar')"
+    >
       🧃
     </button>
-    <button class="btn btn-success" (click)="onChange(0, -4, -6, 60, -4)">
+    <button
+      class="btn btn-success"
+      (click)="onChange(0, 0, 0, 60, 0, 'Theater')"
+    >
       🎭
     </button>
-    <button class="btn btn-success" (click)="onChange(0, 60, -6, -8, -4)">
+    <button
+      class="btn btn-success"
+      (click)="onChange(0, 60, 0, 0, 0, 'Italian Restaurant')"
+    >
       🍝
     </button>
-    <button class="btn btn-success" (click)="onChange(0, 60, -6, -8, -4)">
+    <button
+      class="btn btn-success"
+      (click)="onChange(0, 60, 0, 0, 0, 'Taco Stand')"
+    >
       🌮
     </button>
-    <button class="btn btn-success" (click)="onChange(0, -4, 40, 40, -4)">
+    <button
+      class="btn btn-success"
+      (click)="onChange(0, 0, 40, 40, 0, 'Nightclub')"
+    >
       🍸
     </button>
-    <button class="btn btn-success" (click)="onChange(0, 20, 20, 40, -4)">
+    <button
+      class="btn btn-success"
+      (click)="onChange(0, 20, 20, 40, 0, 'Fair')"
+    >
       🎡
     </button>
-    <button class="btn btn-success" (click)="onChange(0, 40, 20, -8, -4)">
+    <button
+      class="btn btn-success"
+      (click)="onChange(0, 40, 20, 0, 0, 'Sandwich Shop')"
+    >
       🥪
     </button>
   </div>

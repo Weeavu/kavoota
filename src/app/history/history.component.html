@@ -1,0 +1,16 @@
+<div class="center">
+  <h2>History</h2>
+  <div class="container">
+    <div class="overflow-auto">
+      <ul class="list-group">
+        <li
+          class="list-group-item list-group-item-dark"
+          *ngFor="let item of history"
+        >
+          {{ item }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <button class="btn btn-primary" (click)="undo()">Undo</button>
+</div>

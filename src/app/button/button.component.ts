@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../service/data.service';
+import { HistoryService } from '../service/history.service';
 
 @Component({
   selector: 'buttons',
@@ -19,13 +20,23 @@ export class ButtonComponent implements OnInit {
   service: any;
   changeVal: any;
 
-  constructor(private dataService: DataService) {}
+  constructor(
+    private dataService: DataService,
+    private historyService: HistoryService
+  ) {}
 
   ngOnInit() {
     this.service = this.dataService;
   }
 
-  onChange(g: number, f: number, d: number, e: number, t: number) {
+  move(name: string) {
+    var last = { ...this.dataService.getData() };
+    this.historyService.addPoints(last);
+    this.service.movementEvent();
+    this.historyService.addHistory(name);
+  }
+
+  onChange(g: number, f: number, d: number, e: number, t: number, a?: any) {
     this.changeVal = {
       gas: g,
       food: f,
@@ -33,6 +44,9 @@ export class ButtonComponent implements OnInit {
       entertainment: e,
       time: t,
     };
+    var last = { ...this.dataService.getData() };
+    this.historyService.addPoints(last);
     this.service.eventChange(this.changeVal);
+    this.historyService.addHistory(a);
   }
 }
