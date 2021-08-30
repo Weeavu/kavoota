@@ -9,6 +9,13 @@ import { BarsComponent } from './bar/bar.component';
 import { DataService } from './service/data.service';
 import { HistoryComponent } from './history/history.component';
 import { HistoryService } from './service/history.service';
+import { NavComponent } from './nav/nav.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FrameComponent } from './frame/frame.component';
+import { DateComponent } from './date/date.component';
+import { CardComponent } from './card/card.component';
+import { ClipboardModule } from 'ngx-clipboard';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,8 +23,19 @@ import { HistoryService } from './service/history.service';
     ButtonComponent,
     BarsComponent,
     HistoryComponent,
+    NavComponent,
+    FrameComponent,
+    DateComponent,
+    CardComponent,
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, MatProgressBarModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatProgressBarModule,
+    AppRoutingModule,
+    ClipboardModule,
+    FormsModule,
+  ],
   providers: [DataService, HistoryService],
   bootstrap: [AppComponent],
 })

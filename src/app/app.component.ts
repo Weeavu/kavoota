@@ -6,22 +6,7 @@ import { HistoryComponent } from './history/history.component';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <h1>Welcome to Kavoota</h1>
-    <div class="row">
-      <div class="col">
-        <bars></bars>
-        <br />
-        <buttons></buttons>
-        <div style="text-align: center">
-          <img src="assets/truman.png" />
-        </div>
-      </div>
-      <div class="col">
-        <history></history>
-      </div>
-    </div>
-  `,
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {

@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Welcome to Frame!</h1>
+  <br />
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="inputCardCode" class="sr-only">Card Code</label>
+    <input
+      name="cardCode"
+      type="text"
+      class="form-control"
+      id="inputCardCode"
+      placeholder="Enter Card Code..."
+      [(ngModel)]="cardCode"
+      maxlength="7"
+    />
+  </div>
+  <br />
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6 col-md-4 col-lg-3 mb-4" *ngFor="let frame of frames">
+        <app-card [frame]="frame" [cardCode]="cardCode"></app-card>
+      </div>
+    </div>
+  </div>
+</div>
