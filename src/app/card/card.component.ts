@@ -15,6 +15,5 @@ export class CardComponent implements OnInit {
 
   copyClicked() {
     console.log('Copied');
-    alert(`Command Copied for ${this.cardCode} with ${this.frame.name}`);
   }
 }
