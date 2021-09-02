@@ -16,6 +16,7 @@ import { DateComponent } from './date/date.component';
 import { CardComponent } from './card/card.component';
 import { ClipboardModule } from 'ngx-clipboard';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     ClipboardModule,
     FormsModule,
+    NgbModule,
   ],
   providers: [DataService, HistoryService],
   bootstrap: [AppComponent],
