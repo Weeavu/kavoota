@@ -239,7 +239,7 @@ export class FrameComponent implements OnInit {
     },
     {
       id: 48,
-      name: "Winner's Podium Frame",
+      name: 'Winners Podium Frame',
       image: '../..//assets/frames/frame-winnerspodium.jpg',
     },
     {
