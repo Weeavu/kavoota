@@ -3,12 +3,11 @@
   <div class="card-body">
     <h5 class="card-title">{{ frame.id }}. {{ frame.name }}</h5>
     <p>ku {{ frame.name.toLowerCase() }} {{ cardCode }}</p>
-    <div #container></div>
+    <div></div>
     <button
       class="btn btn btn-primary"
       ngxClipboard
       [cbContent]="'ku ' + frame.name.toLowerCase() + ' ' + cardCode"
-      [container]="container"
       (click)="copyClicked()"
     >
       Copy Command
